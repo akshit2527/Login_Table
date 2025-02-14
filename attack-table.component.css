@@ -1,0 +1,26 @@
+.table-container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #faebf4;
+  }
+  
+  button {
+    margin: 2px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  

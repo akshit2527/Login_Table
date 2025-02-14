@@ -1,0 +1,32 @@
+<div class="table-container">
+  <h2>Attack Table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Type of Attack</th>
+        <th>Agents</th>
+        <th>Sub agents</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entry of attackEntries">
+        <td>{{ entry.type }}</td>
+        <td>{{ entry.agents }}</td>
+        <td>{{ entry.subAgents }}</td>
+        <td>
+          <button (click)="deleteEntry(entry.id)">Delete</button> <!-- Correct function usage -->
+        </td>
+      </tr>
+      <tr>
+        <td><input type="text" [(ngModel)]="newEntry.type" placeholder="Type of Attack"></td>
+        <td><input type="text" [(ngModel)]="newEntry.agents" placeholder="Agents"></td>
+        <td><input type="text" [(ngModel)]="newEntry.subAgents" placeholder="Sub agents"></td>
+        <td>
+          <button (click)="addEntry()">Add</button>
+          <button (click)="cancelEntry()">Cancel</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
